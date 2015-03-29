@@ -13,5 +13,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="start"/>
+<Button android:id="@+id/btnDownload"
+    	android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="下载"/>
 </LinearLayout>
 

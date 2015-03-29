@@ -1,2 +1,2 @@
-adb uninstall  cn.believeus.music
-mvn clean compile package android:deploy android:run
+adb uninstall  cn.believeus.main
+mvn clean compile package android:deploy android:run 

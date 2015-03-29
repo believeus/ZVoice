@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">开源知音</string>
+    <string name="ZVoicePlayerStart">开始</string>
+    <string name="ZVoicePlayerPause">暂停</string>
+    <string name="ZVoicePlayerStop">停止</string>
 </resources>
