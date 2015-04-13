@@ -2,25 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example.mvnandroid</groupId>
-	<artifactId>amvn_test</artifactId>
+	<groupId>cn.believeus.zvoice</groupId>
+	<artifactId>zvoice</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>apk</packaging>
-	<name>amvn_t</name>
-
+	<name>ZVoice</name>
 	<dependencies>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android</artifactId>
-			<version>2.3.3</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.3.1</version>
-		</dependency>
-
+		<dependency>  
+            <groupId>com.google.android</groupId>  
+            <artifactId>android</artifactId>  
+           	<version>4.1.1.4</version> 
+            <scope>provided</scope>  
+        </dependency>  
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -47,6 +40,9 @@
 					<!--Begin Name:wuqiwei Date:2013-12-21 AddReason:mvn compile 会使用该路径下的所有类和依赖的jar包编译源文件 -->
 					<compilerArgument>-Djava.ext.dirs=libs</compilerArgument>
 					<!--End Name:wuqiwei Date:2013-12-21 AddReason:mvn compile 会使用该路径下的所有类和依赖的jar包编译源文件 -->
+					<!--Begin:Name:wuqiwei Date:2015-4-2 AddReason:android整合maven失败!手动指定android.jar所在路径  -->
+					<compilerArgument>-Djava.ext.dirs=${env.ANDROID_HOME}/platforms/android-17/</compilerArgument>
+					<!--End:Name:wuqiwei Date:2015-4-2 AddReason:android整合maven失败!手动指定android.jar所在路径  -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -58,7 +54,7 @@
 					</run>
 					<sdk>
 						<path>${env.ANDROID_HOME}</path>
-						<platform>10</platform>
+						<platform>17</platform>
 					</sdk>
 					<emulator>
 						<avd>emulator-5554_android</avd>
